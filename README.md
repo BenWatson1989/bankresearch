@@ -55,3 +55,21 @@ data = page.css(".content").getall()
 
 See the [Scrapling documentation](https://scrapling.readthedocs.io/en/latest/) for the
 full API, including spiders, sessions, proxy rotation, and the CLI.
+
+## Competitor research (Bank für Vermögen)
+
+This repo includes a competitive-research setup:
+
+- **`scrape_bfv.py`** — a ready-to-run crawler that maps the Bank für Vermögen (BfV)
+  website using the stealth fetcher: sitemap inventory, page count, landing pages,
+  lead forms, CTAs, and site structure. Output lands in `data/`.
+- **`MANUAL.md`** — step-by-step instructions to clone this repo and run the scrape
+  on a machine with open internet access (including a copy-paste prompt for local
+  Claude Code).
+- **`docs/partner-bank-vs-bfv-strategy.md`** — the strategic brief: how Partner Bank
+  AG should position against BfV.
+
+> ⚠️ The scrape **cannot run inside the Claude Code web environment** — its network
+> policy blocks outbound connections to the open internet. Run `scrape_bfv.py`
+> locally per `MANUAL.md`. Confirm `BASE_URL` in the script is the correct BfV
+> homepage before running.
