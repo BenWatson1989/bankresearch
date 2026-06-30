@@ -1,0 +1,7 @@
+# Scrapling - adaptive web scraping framework
+# Includes the browser-based fetchers (Fetcher / StealthyFetcher / DynamicFetcher)
+# and the Spider crawling framework, which bank-research scraping typically needs.
+#
+# After installing these requirements, download the browser binaries once with:
+#   scrapling install
+scrapling[fetchers]==0.4.9
